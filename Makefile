@@ -1,7 +1,7 @@
 DPROG = i5test.exe
 LPROG = i5test-l32
 
-all: $(DPROG) $(LPROG)
+all: $(LPROG)
 
 $(DPROG) : sub.obj main.c
 	i586-pc-msdosdjgpp-gcc main.c -o $@ -Wall $< -o $@
