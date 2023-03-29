@@ -10,10 +10,10 @@ $(DPROG) : sub.obj main.c
 	nasm -f coff $< -o $@
 
 $(LPROG) : sub.o main.o
-	gcc -g -m32 -no-pie -o $@ $^ -Wl,-melf_i386
+	gcc -g -Wall -m32 -no-pie -o $@ $^ -Wl,-melf_i386
 
 %.o : %.c
-	gcc -g -m32 -no-pie -c $< -o $@
+	gcc -g -Wall -m32 -no-pie -c $< -o $@
 
 %.o : %.asm
 	nasm -g -f elf32 $< -o $@
